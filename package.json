@@ -1,0 +1,23 @@
+{
+  "name": "software_test_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czrmutran/software_test_cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czrmutran/software_test_cypress/issues"
+  },
+  "homepage": "https://github.com/czrmutran/software_test_cypress#readme",
+  "devDependencies": {
+    "cypress": "^14.2.0"
+  }
+}

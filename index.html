@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Cadastro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 600px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 1rem;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulário de Cadastro</h1>
+  <form id="cadastroForm">
+    <!-- 1. Nome -->
+    <label for="nome">Nome (3 a 50 caracteres, apenas letras e espaços):</label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      required
+      minlength="3"
+      maxlength="50"
+      pattern="^[A-Za-zÀ-ÖÙ-öù-ü\s]+$"
+      placeholder="Digite seu nome"
+    />
+
+    <!-- 2. Endereço -->
+    <label for="endereco">Endereço (10 a 100 caracteres, permite letras, números, vírgula, ponto e espaço):</label>
+    <input
+      type="text"
+      id="endereco"
+      name="endereco"
+      required
+      minlength="10"
+      maxlength="100"
+      pattern="^[A-Za-z0-9À-ÖÙ-öù-ü,\.\s]+$"
+      placeholder="Digite seu endereço"
+    />
+
+    <!-- 3. E-mail -->
+    <label for="email">E-mail (formato válido):</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      placeholder="exemplo@dominio.com"
+    />
+
+    <!-- 4. Senha -->
+    <label for="senha">Senha (mínimo 8 caracteres, com letras maiúsculas, minúsculas, números e especiais):</label>
+    <input
+      type="password"
+      id="senha"
+      name="senha"
+      required
+      minlength="8"
+      placeholder="Digite sua senha"
+    />
+
+    <!-- 5. Telefone -->
+    <label for="telefone">Telefone (10 a 15 dígitos):</label>
+    <input
+      type="tel"
+      id="telefone"
+      name="telefone"
+      required
+      pattern="^[0-9]{10,15}$"
+      placeholder="11999999999"
+    />
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    // Exemplo simples de validação extra e exibição de erros (opcional)
+    const form = document.getElementById('cadastroForm');
+
+    form.addEventListener('submit', (event) => {
+      // Se algum campo estiver inválido, impedir envio e exibir mensagens
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        alert('Por favor, corrija os campos inválidos antes de enviar.');
+      }
+    });
+  </script>
+</body>
+</html>
