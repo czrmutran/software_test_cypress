@@ -4,7 +4,7 @@
 
 # Passo a passo:
 
-    1. npm install cypress
+    1. npm install cypress --save-dev
 
     2. npm run test
 
