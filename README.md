@@ -6,10 +6,12 @@
 
     1. npm install cypress --save-dev
 
-    2. npm run test
+    2. npx cypress open
+    
+    3. npm run test
 
-    3. E2E Testing (cypress UI)
+    4. E2E Testing (cypress UI)
 
-    4. Selecione 'form.cy.js'
+    5. Selecione 'form.cy.js'
 
-    5. Feito !
+    6. Feito !
